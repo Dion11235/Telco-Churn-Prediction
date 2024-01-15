@@ -15,7 +15,7 @@ def get_dependencies(filepath:str)->List[str]:
 setup(
     name="TELCO_churn_classification",
     author="Dipan Banik",
-    author_email="dipanthedataguy@gmail.com"
+    author_email="dipanthedataguy@gmail.com",
     version="0.0.1", # data.model.parameters
     packages=find_packages(),
     install_requires=get_dependencies("requirements.txt")

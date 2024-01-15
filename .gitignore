@@ -1,0 +1,6 @@
+__pycache__
+.vscode
+churenv
+*.pyc
+*.pyo
+*.pyd

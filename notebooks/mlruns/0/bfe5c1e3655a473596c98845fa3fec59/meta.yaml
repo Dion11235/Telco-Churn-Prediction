@@ -1,0 +1,15 @@
+artifact_uri: file:///home/dipan.banik%40sapt.local/Dipan/Telco-Churn-Prediction/notebooks/mlruns/0/bfe5c1e3655a473596c98845fa3fec59/artifacts
+end_time: 1706186140564
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bfe5c1e3655a473596c98845fa3fec59
+run_name: caring-ox-29
+run_uuid: bfe5c1e3655a473596c98845fa3fec59
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706186138256
+status: 3
+tags: []
+user_id: dipan.banik

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/dipan.banik%40sapt.local/Dipan/Telco-Churn-Prediction/notebooks/mlruns/0/113743c29e8541c9af339dc74d2b3261/artifacts
+end_time: 1706186324774
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 113743c29e8541c9af339dc74d2b3261
+run_name: resilient-dove-138
+run_uuid: 113743c29e8541c9af339dc74d2b3261
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706186275241
+status: 3
+tags: []
+user_id: dipan.banik

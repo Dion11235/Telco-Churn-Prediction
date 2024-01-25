@@ -1,0 +1,15 @@
+artifact_uri: file:///home/dipan.banik%40sapt.local/Dipan/Telco-Churn-Prediction/notebooks/mlruns/0/b550978803834230a7e7ac52f0601401/artifacts
+end_time: 1706186268774
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b550978803834230a7e7ac52f0601401
+run_name: unleashed-hen-360
+run_uuid: b550978803834230a7e7ac52f0601401
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706186219031
+status: 3
+tags: []
+user_id: dipan.banik

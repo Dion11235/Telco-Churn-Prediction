@@ -1,0 +1,15 @@
+artifact_uri: file:///home/dipan.banik%40sapt.local/Dipan/Telco-Churn-Prediction/notebooks/mlruns/0/a5f65696e6ba4d8d9726cebf5e8a7edc/artifacts
+end_time: 1706186175153
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a5f65696e6ba4d8d9726cebf5e8a7edc
+run_name: bemused-shoat-821
+run_uuid: a5f65696e6ba4d8d9726cebf5e8a7edc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706186143045
+status: 4
+tags: []
+user_id: dipan.banik

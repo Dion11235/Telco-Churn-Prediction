@@ -1,0 +1,15 @@
+artifact_uri: file:///home/dipan.banik%40sapt.local/Dipan/Telco-Churn-Prediction/notebooks/mlruns/0/988908a4f4c947e286a7bd83a03f4f41/artifacts
+end_time: 1706186025258
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 988908a4f4c947e286a7bd83a03f4f41
+run_name: stylish-ape-286
+run_uuid: 988908a4f4c947e286a7bd83a03f4f41
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706186023175
+status: 3
+tags: []
+user_id: dipan.banik

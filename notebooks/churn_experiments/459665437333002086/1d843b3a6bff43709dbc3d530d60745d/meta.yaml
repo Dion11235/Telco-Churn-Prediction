@@ -1,0 +1,15 @@
+artifact_uri: /home/dipan.banik@sapt.local/Dipan/Telco-Churn-Prediction/notebooks/churn_experiments/459665437333002086/1d843b3a6bff43709dbc3d530d60745d/artifacts
+end_time: 1706530150970
+entry_point_name: ''
+experiment_id: '459665437333002086'
+lifecycle_stage: active
+run_id: 1d843b3a6bff43709dbc3d530d60745d
+run_name: Undersampling-SVC
+run_uuid: 1d843b3a6bff43709dbc3d530d60745d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706530141360
+status: 3
+tags: []
+user_id: dipan.banik

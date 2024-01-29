@@ -1,0 +1,15 @@
+artifact_uri: /home/dipan.banik@sapt.local/Dipan/Telco-Churn-Prediction/notebooks/churn_experiments/459665437333002086/6230aea87f2a4143a4ba87ddc0f8db1e/artifacts
+end_time: 1706530742231
+entry_point_name: ''
+experiment_id: '459665437333002086'
+lifecycle_stage: active
+run_id: 6230aea87f2a4143a4ba87ddc0f8db1e
+run_name: SMOTE-XGBClassifier
+run_uuid: 6230aea87f2a4143a4ba87ddc0f8db1e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706530628290
+status: 3
+tags: []
+user_id: dipan.banik

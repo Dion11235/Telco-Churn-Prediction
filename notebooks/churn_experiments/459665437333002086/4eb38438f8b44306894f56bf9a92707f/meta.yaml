@@ -1,0 +1,15 @@
+artifact_uri: /home/dipan.banik@sapt.local/Dipan/Telco-Churn-Prediction/notebooks/churn_experiments/459665437333002086/4eb38438f8b44306894f56bf9a92707f/artifacts
+end_time: 1706529958537
+entry_point_name: ''
+experiment_id: '459665437333002086'
+lifecycle_stage: active
+run_id: 4eb38438f8b44306894f56bf9a92707f
+run_name: Original-SVC
+run_uuid: 4eb38438f8b44306894f56bf9a92707f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706529940914
+status: 3
+tags: []
+user_id: dipan.banik

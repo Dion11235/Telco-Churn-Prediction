@@ -1,0 +1,15 @@
+artifact_uri: /home/dipan.banik@sapt.local/Dipan/Telco-Churn-Prediction/notebooks/churn_experiments/459665437333002086/c5fe4f77159948cd8df05d80660e96df/artifacts
+end_time: 1706530580654
+entry_point_name: ''
+experiment_id: '459665437333002086'
+lifecycle_stage: active
+run_id: c5fe4f77159948cd8df05d80660e96df
+run_name: Oversampling-XGBClassifier
+run_uuid: c5fe4f77159948cd8df05d80660e96df
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706530412210
+status: 3
+tags: []
+user_id: dipan.banik

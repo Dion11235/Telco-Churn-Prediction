@@ -1,0 +1,15 @@
+artifact_uri: /home/dipan.banik@sapt.local/Dipan/Telco-Churn-Prediction/notebooks/churn_experiments/459665437333002086/70bf64ed31884df98653763bf9c3a4f9/artifacts
+end_time: 1706530412208
+entry_point_name: ''
+experiment_id: '459665437333002086'
+lifecycle_stage: active
+run_id: 70bf64ed31884df98653763bf9c3a4f9
+run_name: Oversampling-SVC
+run_uuid: 70bf64ed31884df98653763bf9c3a4f9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706530353579
+status: 3
+tags: []
+user_id: dipan.banik

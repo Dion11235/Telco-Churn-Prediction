@@ -1,0 +1,16 @@
+artifact_uri: /home/dipan.banik@sapt.local/Dipan/Telco-Churn-Prediction/notebooks/churn_experiments/459665437333002086/98ad961dafef4afab8534c9d7c305288/artifacts
+deleted_time: 1706533024152
+end_time: null
+entry_point_name: ''
+experiment_id: '459665437333002086'
+lifecycle_stage: deleted
+run_id: 98ad961dafef4afab8534c9d7c305288
+run_name: bald-bass-341
+run_uuid: 98ad961dafef4afab8534c9d7c305288
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706532153146
+status: 1
+tags: []
+user_id: dipan.banik

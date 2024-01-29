@@ -1,0 +1,15 @@
+artifact_uri: /home/dipan.banik@sapt.local/Dipan/Telco-Churn-Prediction/notebooks/churn_experiments/459665437333002086/b8e1605990c949378c3c6744344bd946/artifacts
+end_time: 1706530353576
+entry_point_name: ''
+experiment_id: '459665437333002086'
+lifecycle_stage: active
+run_id: b8e1605990c949378c3c6744344bd946
+run_name: Oversampling-RandomForestClassifier
+run_uuid: b8e1605990c949378c3c6744344bd946
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706530348589
+status: 3
+tags: []
+user_id: dipan.banik

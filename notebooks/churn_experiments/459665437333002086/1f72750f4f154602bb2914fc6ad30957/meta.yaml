@@ -1,0 +1,15 @@
+artifact_uri: /home/dipan.banik@sapt.local/Dipan/Telco-Churn-Prediction/notebooks/churn_experiments/459665437333002086/1f72750f4f154602bb2914fc6ad30957/artifacts
+end_time: 1706529940912
+entry_point_name: ''
+experiment_id: '459665437333002086'
+lifecycle_stage: active
+run_id: 1f72750f4f154602bb2914fc6ad30957
+run_name: Original-RandomForestClassifier
+run_uuid: 1f72750f4f154602bb2914fc6ad30957
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706529936605
+status: 3
+tags: []
+user_id: dipan.banik

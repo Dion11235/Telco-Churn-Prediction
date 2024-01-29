@@ -1,0 +1,15 @@
+artifact_uri: /home/dipan.banik@sapt.local/Dipan/Telco-Churn-Prediction/notebooks/churn_experiments/459665437333002086/d2a0f1f66ee646aa91d03b9f328720b3/artifacts
+end_time: 1706530137633
+entry_point_name: ''
+experiment_id: '459665437333002086'
+lifecycle_stage: active
+run_id: d2a0f1f66ee646aa91d03b9f328720b3
+run_name: Undersampling-LogisticRegression
+run_uuid: d2a0f1f66ee646aa91d03b9f328720b3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706530133026
+status: 3
+tags: []
+user_id: dipan.banik

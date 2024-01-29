@@ -1,0 +1,15 @@
+artifact_uri: /home/dipan.banik@sapt.local/Dipan/Telco-Churn-Prediction/notebooks/churn_experiments/459665437333002086/0ec0110f62da4955b580d07109424aed/artifacts
+end_time: 1706530628287
+entry_point_name: ''
+experiment_id: '459665437333002086'
+lifecycle_stage: active
+run_id: 0ec0110f62da4955b580d07109424aed
+run_name: SMOTE-SVC
+run_uuid: 0ec0110f62da4955b580d07109424aed
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706530589032
+status: 3
+tags: []
+user_id: dipan.banik

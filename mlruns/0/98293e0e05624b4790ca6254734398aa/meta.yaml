@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/98293e0e05624b4790ca6254734398aa/artifacts
+end_time: 1706202983561
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 98293e0e05624b4790ca6254734398aa
+run_name: Oversampling-XGBClassifier
+run_uuid: 98293e0e05624b4790ca6254734398aa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706202979212
+status: 3
+tags: []
+user_id: asus

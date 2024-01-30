@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/1b51fc2fd7e3468987770a46fcdd79b4/artifacts
+end_time: 1706203010187
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1b51fc2fd7e3468987770a46fcdd79b4
+run_name: SMOTE-XGBClassifier
+run_uuid: 1b51fc2fd7e3468987770a46fcdd79b4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706203004977
+status: 3
+tags: []
+user_id: asus

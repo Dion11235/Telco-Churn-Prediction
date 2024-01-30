@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/3a19530dcf8d43c69f463e563bb320ae/artifacts
+end_time: 1706202948252
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3a19530dcf8d43c69f463e563bb320ae
+run_name: Undersampling-RandomForestClassifier
+run_uuid: 3a19530dcf8d43c69f463e563bb320ae
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706202943170
+status: 3
+tags: []
+user_id: asus

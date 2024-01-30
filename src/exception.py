@@ -1,9 +1,11 @@
 import sys
+from src.logger import logging
 
 class CustomException(Exception):
     def __init__(self, error_detail):
         super().__init__(str(error_detail))
         self.custom_error_msg = self.custom_error_detail(str(error_detail), error_detail)
+        logging.info(self.custom_error_msg)
     
     def custom_error_detail(self, error_message, error_detail):
         file_name = error_detail.__traceback__.tb_frame.f_code.co_filename
@@ -15,7 +17,6 @@ class CustomException(Exception):
     
 
 if __name__ == "__main__":
-    from src.logger import logging  # Assuming you have a logger module
     try:
         a = 1 / 0
     except Exception as e:

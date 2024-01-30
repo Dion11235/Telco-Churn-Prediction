@@ -78,22 +78,22 @@ movie_tuple = movie1.__tuple__
 
 @dataclass
 class DataIngestionConfig:
-    raw_data_path: str = os.path.join("data/raw", "WA_Fn-UseC_-Telco-Customer-Churn.csv")
-    intermediate_raw_data_path: str = os.path.join("data/processed", "intermediate_data.csv")
+    raw_data_path: str = os.path.join("data","raw", "WA_Fn-UseC_-Telco-Customer-Churn.csv")
+    intermediate_raw_data_path: str = os.path.join("data","processed", "intermediate_data.csv")
 
-    train_x_data_path: str = os.path.join("data/processed", "train_x.csv")
-    train_y_data_path: str = os.path.join("data/processed", "train_y.csv")
+    train_x_data_path: str = os.path.join("data","processed", "train_x.csv")
+    train_y_data_path: str = os.path.join("data","processed", "train_y.csv")
 
-    test_x_data_path: str = os.path.join("data/processed", "test_x.csv")
-    test_y_data_path: str = os.path.join("data/processed", "test_y.csv")
+    test_x_data_path: str = os.path.join("data","processed", "test_x.csv")
+    test_y_data_path: str = os.path.join("data","processed", "test_y.csv")
 
-    train_x_data_enc_path: str = os.path.join("data/encoded", "train_x_oh_encoded.npy")
-    train_y_data_enc_path: str = os.path.join("data/encoded", "train_y_encoded.npy")
+    train_x_data_enc_path: str = os.path.join("data","encoded", "train_x_oh_encoded.npy")
+    train_y_data_enc_path: str = os.path.join("data","encoded", "train_y_encoded.npy")
 
-    test_x_data_enc_path: str = os.path.join("data/encoded", "test_x_oh_encoded.npy")
+    test_x_data_enc_path: str = os.path.join("data","encoded", "test_x_oh_encoded.npy")
     test_y_data_enc_path: str = os.path.join("data/encoded", "test_y_oh_encoded.npy")
 
-    gt_enc_path: str = os.path.join("data/encoded", "class_encodings.json")
+    gt_enc_path: str = os.path.join("data","encoded", "class_encodings.json")
 
 
 
@@ -103,7 +103,10 @@ class DataIngestion:
         self.data_configs = DataIngestionConfig()
 
     def change_dtype(self, value, to_type=float):
-        return to_type(value)
+        try:
+            return to_type(value)
+        except:
+            None
         
     def ingest_data(self):
         logging.info("Initiated data ingestion ...")
@@ -114,7 +117,6 @@ class DataIngestion:
             
 
             # dtype fixing and NA handling
-            print("HERE")
             df["TotalCharges"] = df["TotalCharges"].apply(lambda x: self.change_dtype(x, float))
             df["SeniorCitizen"] = df["SeniorCitizen"].apply(lambda x: self.change_dtype(x, str))
             df.dropna(inplace=True)
@@ -175,7 +177,7 @@ class DataIngestion:
             with open(self.data_configs.gt_enc_path, "w") as f:
                 json.dump(self.class_labels, f)
 
-            logging.info(f"One hot encoding and data splitting are done and saved in the folder {os.path.dirname(self.data_configs.train_data_enc_path)}")
+            logging.info(f"One hot encoding and data splitting are done and saved in the folder {os.path.dirname(self.data_configs.train_x_data_enc_path)}")
             logging.info("Training data size : {} {}".format(len(self.train_X_df), len(self.train_y_df)))
             logging.info("Test data size : {} {}".format(len(self.test_X_df), len(self.test_y_df)))
 
@@ -190,8 +192,7 @@ class DataIngestion:
             )
         
         except Exception as e:
-            logging.info("error -- "+str(e))
-            CustomException(e)
+            logging.info(CustomException(e))
 
 
 

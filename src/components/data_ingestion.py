@@ -14,6 +14,8 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from dataclasses import dataclass
 
+from data_transformation import DataTransformation
+
 
 
 """
@@ -79,22 +81,13 @@ movie_tuple = movie1.__tuple__
 @dataclass
 class DataIngestionConfig:
     raw_data_path: str = os.path.join("data","raw", "WA_Fn-UseC_-Telco-Customer-Churn.csv")
-    intermediate_raw_data_path: str = os.path.join("data","processed", "intermediate_data.csv")
+    intermediate_raw_data_path: str = os.path.join("data","intermediate", "intermediate_data.csv")
 
-    train_x_data_path: str = os.path.join("data","processed", "train_x.csv")
-    train_y_data_path: str = os.path.join("data","processed", "train_y.csv")
+    train_x_data_path: str = os.path.join("data","intermediate", "train_x.csv")
+    train_y_data_path: str = os.path.join("data","intermediate", "train_y.csv")
 
-    test_x_data_path: str = os.path.join("data","processed", "test_x.csv")
-    test_y_data_path: str = os.path.join("data","processed", "test_y.csv")
-
-    train_x_data_enc_path: str = os.path.join("data","encoded", "train_x_oh_encoded.npy")
-    train_y_data_enc_path: str = os.path.join("data","encoded", "train_y_encoded.npy")
-
-    test_x_data_enc_path: str = os.path.join("data","encoded", "test_x_oh_encoded.npy")
-    test_y_data_enc_path: str = os.path.join("data/encoded", "test_y_oh_encoded.npy")
-
-    gt_enc_path: str = os.path.join("data","encoded", "class_encodings.json")
-
+    test_x_data_path: str = os.path.join("data","intermediate", "test_x.csv")
+    test_y_data_path: str = os.path.join("data","intermediate", "test_y.csv")
 
 
 
@@ -137,66 +130,46 @@ class DataIngestion:
             self.train_X_df, self.test_X_df, self.train_y_df, self.test_y_df = train_test_split(X_df, y_df, 
                                                                                                 test_size=0.2, 
                                                                                                 stratify=y_df)
-            
-            # class labels and one hot encoding
-            preprocessor = ColumnTransformer(
-                transformers=[
-                    ('onehot', OneHotEncoder(), self.categorical_cols)
-                ],
-                remainder='passthrough'  # Keep non-categorical columns unchanged
-            )
-            self.class_labels = {c:i for i,c in enumerate(set(self.train_y_df["Churn"]))}
-
-            # Fit and transform training data
-            self.train_X_encoded = preprocessor.fit_transform(self.train_X_df)
-            self.train_y_encoded = self.train_y_df["Churn"].map(self.class_labels).values
-
-            # Transform test data
-            self.test_X_encoded = preprocessor.transform(self.test_X_df)
-            self.test_y_encoded = self.test_y_df["Churn"].map(self.class_labels).values
 
             # saving train x,y dataframes
             os.makedirs(os.path.dirname(self.data_configs.train_x_data_path), exist_ok=True)
             self.train_X_df.to_csv(self.data_configs.train_x_data_path, index=False)
-            self.train_y_df.to_csv(self.data_configs.train_x_data_path, index=False)
+            self.train_y_df.to_csv(self.data_configs.train_y_data_path, index=False)
 
             # saving test x,y dataframes
             self.test_X_df.to_csv(self.data_configs.test_x_data_path, index=False)
             self.test_y_df.to_csv(self.data_configs.test_y_data_path, index=False)
 
-            # saving train x,y encoded arrays
-            os.makedirs(os.path.dirname(self.data_configs.train_x_data_enc_path), exist_ok=True)
-            np.save(self.data_configs.train_x_data_enc_path, self.train_X_encoded)
-            np.save(self.data_configs.train_y_data_enc_path, self.train_y_encoded)
+            
 
-            # saving test x,y encoded arrays
-            np.save(self.data_configs.test_x_data_enc_path, self.test_X_encoded)
-            np.save(self.data_configs.test_y_data_enc_path, self.test_y_encoded)
-
-            # saving class labellings
-            with open(self.data_configs.gt_enc_path, "w") as f:
-                json.dump(self.class_labels, f)
-
-            logging.info(f"One hot encoding and data splitting are done and saved in the folder {os.path.dirname(self.data_configs.train_x_data_enc_path)}")
+            logging.info(f"data splitting are done and saved in the folder {os.path.dirname(self.data_configs.train_x_data_path)}")
             logging.info("Training data size : {} {}".format(len(self.train_X_df), len(self.train_y_df)))
             logging.info("Test data size : {} {}".format(len(self.test_X_df), len(self.test_y_df)))
 
             logging.info("in Train data :\n{}".format(self.train_y_df.value_counts()/self.train_y_df.value_counts().sum()))
             logging.info("in Test data :\n{}".format(self.test_y_df.value_counts()/self.test_y_df.value_counts().sum()))
 
+            logging.info("DATA INGESTION DONE ... !!!")
+
             return(
-                self.data_configs.train_x_data_enc_path,
+                self.data_configs.train_x_data_path,
                 self.data_configs.train_y_data_path,
-                self.data_configs.test_x_data_enc_path,
-                self.data_configs.test_y_data_enc_path,
+                self.data_configs.test_x_data_path,
+                self.data_configs.test_y_data_path
             )
         
         except Exception as e:
-            logging.info(CustomException(e))
+            raise CustomException(e)
 
 
 
 if __name__ == "__main__":
     data_inj = DataIngestion()
-    data_inj.ingest_data()
+    train_x_path, train_y_path, test_x_path, test_y_path = data_inj.ingest_data()
+
+    data_transformation = DataTransformation()
+    train_x_enc, train_y_enc, test_x_enc, test_y_enc, preprocessor_path = data_transformation.transform_data(train_x_path,
+                                                                                                            train_y_path,
+                                                                                                            test_x_path,
+                                                                                                            test_y_path)
 

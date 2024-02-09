@@ -1,0 +1,15 @@
+artifact_uri: /home/dipan.banik@sapt.local/Dipan/Telco-Churn-Prediction/mlflow_experiments_log/673920883807630480/c0b5b1373fd549959c6933a0407a493b/artifacts
+end_time: 1707481353359
+entry_point_name: ''
+experiment_id: '673920883807630480'
+lifecycle_stage: active
+run_id: c0b5b1373fd549959c6933a0407a493b
+run_name: original-XGBClassifier
+run_uuid: c0b5b1373fd549959c6933a0407a493b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707481301643
+status: 3
+tags: []
+user_id: dipan.banik

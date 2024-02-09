@@ -15,7 +15,8 @@ from sklearn.compose import ColumnTransformer
 from dataclasses import dataclass
 
 from data_transformation import DataTransformation
-
+from data_augmentation import DataAugmentation
+from model_trainer import ModelTrainer
 
 
 """
@@ -129,7 +130,8 @@ class DataIngestion:
             y_df = df[self.target_col]
             self.train_X_df, self.test_X_df, self.train_y_df, self.test_y_df = train_test_split(X_df, y_df, 
                                                                                                 test_size=0.2, 
-                                                                                                stratify=y_df)
+                                                                                                stratify=y_df,
+                                                                                                random_state=2)
 
             # saving train x,y dataframes
             os.makedirs(os.path.dirname(self.data_configs.train_x_data_path), exist_ok=True)
@@ -173,3 +175,8 @@ if __name__ == "__main__":
                                                                                                             test_x_path,
                                                                                                             test_y_path)
 
+    data_augmentation = DataAugmentation()
+    augmented_data_list = data_augmentation.augment_data(train_x_enc, train_y_enc)
+
+    model_trainer = ModelTrainer()
+    best_model = model_trainer.train_and_evaluate_model(augmented_data_list, test_x_enc, test_y_enc)

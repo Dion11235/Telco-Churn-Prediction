@@ -1,0 +1,15 @@
+artifact_uri: /home/dipan.banik@sapt.local/Dipan/Telco-Churn-Prediction/mlflow_experiments_log/673920883807630480/dc7fb840e5144d7d9ee3d04404ec1fdd/artifacts
+end_time: 1707481301641
+entry_point_name: ''
+experiment_id: '673920883807630480'
+lifecycle_stage: active
+run_id: dc7fb840e5144d7d9ee3d04404ec1fdd
+run_name: original-SVC
+run_uuid: dc7fb840e5144d7d9ee3d04404ec1fdd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707481292171
+status: 3
+tags: []
+user_id: dipan.banik

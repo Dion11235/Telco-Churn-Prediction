@@ -1,0 +1,15 @@
+artifact_uri: /home/dipan.banik@sapt.local/Dipan/Telco-Churn-Prediction/mlflow_experiments_log/673920883807630480/fd7972a6d89744019443cf685e766384/artifacts
+end_time: 1707481436726
+entry_point_name: ''
+experiment_id: '673920883807630480'
+lifecycle_stage: active
+run_id: fd7972a6d89744019443cf685e766384
+run_name: oversampled-SVC
+run_uuid: fd7972a6d89744019443cf685e766384
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707481416342
+status: 3
+tags: []
+user_id: dipan.banik

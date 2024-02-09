@@ -1,0 +1,15 @@
+artifact_uri: /home/dipan.banik@sapt.local/Dipan/Telco-Churn-Prediction/mlflow_experiments_log/673920883807630480/cca34e82726d44e39c3e7f345ee7d678/artifacts
+end_time: 1707481289754
+entry_point_name: ''
+experiment_id: '673920883807630480'
+lifecycle_stage: active
+run_id: cca34e82726d44e39c3e7f345ee7d678
+run_name: original-LogisticRegression
+run_uuid: cca34e82726d44e39c3e7f345ee7d678
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707481286775
+status: 3
+tags: []
+user_id: dipan.banik

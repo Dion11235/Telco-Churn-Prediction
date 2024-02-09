@@ -1,0 +1,15 @@
+artifact_uri: /home/dipan.banik@sapt.local/Dipan/Telco-Churn-Prediction/mlflow_experiments_log/673920883807630480/383b2802752c4c949e1ad4e2fc517995/artifacts
+end_time: 1707481564890
+entry_point_name: ''
+experiment_id: '673920883807630480'
+lifecycle_stage: active
+run_id: 383b2802752c4c949e1ad4e2fc517995
+run_name: popular-stoat-84
+run_uuid: 383b2802752c4c949e1ad4e2fc517995
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707481563084
+status: 3
+tags: []
+user_id: dipan.banik

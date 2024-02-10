@@ -35,7 +35,11 @@ class ChurnInference:
             logging.info("prediction complete ...")
             enc_to_class = {v:k for k,v in self.class_labels.items()}
             df["predicted_churn"] = [enc_to_class[c] for c in predictions]
-            df["prediction_confidence"] = [prediction_confs[:,c] for c in predictions]
+            confs_mod = []
+            for i,c in enumerate(predictions):
+                confs_mod.append(round(prediction_confs[i,c],2))
+                 
+            df["prediction_confidence"] = confs_mod
             
             return df
         

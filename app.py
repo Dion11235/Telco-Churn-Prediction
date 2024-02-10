@@ -25,8 +25,8 @@ class ChurnApp:
 
         # Display probability as a confidence bar
         confidence = probability * 100
-        st.write(f"predicted with a {confidence[0]:.2f}% confidence.")
-        st.progress(probability[0])
+        st.write(f"predicted with a {confidence:.2f}% confidence.")
+        st.progress(probability)
         
     def run_app(self):
         st.set_page_config(layout="wide")

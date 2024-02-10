@@ -1,0 +1,15 @@
+artifact_uri: file:///F:/data_science_glow_up/new_projects/Baiscs/Telco-Churn-Prediction/mlflow_experiments_log/716796248283090398/d5628b90289043d98ae0c5141e925687/artifacts
+end_time: 1707574635467
+entry_point_name: ''
+experiment_id: '716796248283090398'
+lifecycle_stage: active
+run_id: d5628b90289043d98ae0c5141e925687
+run_name: smoted-XGBClassifier
+run_uuid: d5628b90289043d98ae0c5141e925687
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707574627976
+status: 3
+tags: []
+user_id: asus

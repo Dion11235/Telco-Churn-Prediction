@@ -1,0 +1,15 @@
+artifact_uri: file:///F:/data_science_glow_up/new_projects/Baiscs/Telco-Churn-Prediction/mlflow_experiments_log/716796248283090398/6ef494de3daa44e8a46c01773a96e9ba/artifacts
+end_time: 1707574545346
+entry_point_name: ''
+experiment_id: '716796248283090398'
+lifecycle_stage: active
+run_id: 6ef494de3daa44e8a46c01773a96e9ba
+run_name: oversampled-XGBClassifier
+run_uuid: 6ef494de3daa44e8a46c01773a96e9ba
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707574538004
+status: 3
+tags: []
+user_id: asus

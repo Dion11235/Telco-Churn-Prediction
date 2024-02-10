@@ -97,9 +97,12 @@ class ModelTrainer:
                 return None
             else:
                 logging.info(f"Saving the best model ; best experiment - {self.best_exp} ; highest f1 score - {self.best_f1_score}")
-                mlflow.sklearn.save_model(self.best_model, 
-                                          self.model_trainer_config.best_model_path, 
-                                          serialization_format=mlflow.sklearn.SERIALIZATION_FORMAT_PICKLE)
+                if not os.path.exists(self.model_trainer_config.best_model_path):
+                    mlflow.sklearn.save_model(self.best_model, 
+                                            self.model_trainer_config.best_model_path, 
+                                            serialization_format=mlflow.sklearn.SERIALIZATION_FORMAT_PICKLE)
+                else:
+                    logging.info("Skipping saving as best model is already saved ...")
                 return self.best_model
 
         except Exception as e:

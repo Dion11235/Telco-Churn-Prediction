@@ -1,0 +1,15 @@
+artifact_uri: file:///F:/data_science_glow_up/new_projects/Baiscs/Telco-Churn-Prediction/mlflow_experiments_log/716796248283090398/deb0154889444af08c8a1c6ad649db7f/artifacts
+end_time: 1707574430145
+entry_point_name: ''
+experiment_id: '716796248283090398'
+lifecycle_stage: active
+run_id: deb0154889444af08c8a1c6ad649db7f
+run_name: undersampled-RandomForestClassifier
+run_uuid: deb0154889444af08c8a1c6ad649db7f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707574420917
+status: 3
+tags: []
+user_id: asus

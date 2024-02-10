@@ -14,10 +14,6 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from dataclasses import dataclass
 
-from data_transformation import DataTransformation
-from data_augmentation import DataAugmentation
-from model_trainer import ModelTrainer
-
 
 """
 # all about dataclass
@@ -168,15 +164,3 @@ class DataIngestion:
 if __name__ == "__main__":
     data_inj = DataIngestion()
     train_x_path, train_y_path, test_x_path, test_y_path = data_inj.ingest_data()
-
-    data_transformation = DataTransformation()
-    train_x_enc, train_y_enc, test_x_enc, test_y_enc, preprocessor_path = data_transformation.transform_data(train_x_path,
-                                                                                                            train_y_path,
-                                                                                                            test_x_path,
-                                                                                                            test_y_path)
-
-    data_augmentation = DataAugmentation()
-    augmented_data_list = data_augmentation.augment_data(train_x_enc, train_y_enc)
-
-    # model_trainer = ModelTrainer()
-    # best_model = model_trainer.train_and_evaluate_model(augmented_data_list, test_x_enc, test_y_enc)

@@ -1,0 +1,15 @@
+artifact_uri: file:///F:/data_science_glow_up/new_projects/Baiscs/Telco-Churn-Prediction/mlflow_experiments_log/716796248283090398/9f7dd5d7b01a4198b1e69f57c38dab0c/artifacts
+end_time: 1707574445469
+entry_point_name: ''
+experiment_id: '716796248283090398'
+lifecycle_stage: active
+run_id: 9f7dd5d7b01a4198b1e69f57c38dab0c
+run_name: undersampled-SVC
+run_uuid: 9f7dd5d7b01a4198b1e69f57c38dab0c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707574430181
+status: 3
+tags: []
+user_id: asus

@@ -1,0 +1,15 @@
+artifact_uri: file:///F:/data_science_glow_up/new_projects/Baiscs/Telco-Churn-Prediction/mlflow_experiments_log/716796248283090398/a368250e3a2a4b9b9bb3505e8ed6916e/artifacts
+end_time: 1707574470756
+entry_point_name: ''
+experiment_id: '716796248283090398'
+lifecycle_stage: active
+run_id: a368250e3a2a4b9b9bb3505e8ed6916e
+run_name: oversampled-RandomForestClassifier
+run_uuid: a368250e3a2a4b9b9bb3505e8ed6916e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707574459781
+status: 3
+tags: []
+user_id: asus

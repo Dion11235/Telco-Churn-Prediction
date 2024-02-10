@@ -1,0 +1,15 @@
+artifact_uri: file:///F:/data_science_glow_up/new_projects/Baiscs/Telco-Churn-Prediction/mlflow_experiments_log/101023702026089801/adfa9797a8994f21a02b81cbdd068cdd/artifacts
+end_time: 1707544902329
+entry_point_name: ''
+experiment_id: '101023702026089801'
+lifecycle_stage: active
+run_id: adfa9797a8994f21a02b81cbdd068cdd
+run_name: smoted-RandomForestClassifier
+run_uuid: adfa9797a8994f21a02b81cbdd068cdd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707544896923
+status: 3
+tags: []
+user_id: asus

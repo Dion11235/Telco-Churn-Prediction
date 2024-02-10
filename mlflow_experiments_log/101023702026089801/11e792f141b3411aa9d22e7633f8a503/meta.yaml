@@ -1,0 +1,15 @@
+artifact_uri: file:///F:/data_science_glow_up/new_projects/Baiscs/Telco-Churn-Prediction/mlflow_experiments_log/101023702026089801/11e792f141b3411aa9d22e7633f8a503/artifacts
+end_time: 1707544817223
+entry_point_name: ''
+experiment_id: '101023702026089801'
+lifecycle_stage: active
+run_id: 11e792f141b3411aa9d22e7633f8a503
+run_name: original-LogisticRegression
+run_uuid: 11e792f141b3411aa9d22e7633f8a503
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707544811993
+status: 3
+tags: []
+user_id: asus

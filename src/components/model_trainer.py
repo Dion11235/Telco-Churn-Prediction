@@ -18,7 +18,9 @@ from src.exception import CustomException
 
 
 class modelTrainingConfig:
-    local_tracking_uri: str = os.path.join(os.getcwd(), "mlflow_experiments_log")
+    best_model_path: str = os.path.join("artifacts", "best_model")
+    # local_tracking_uri: str = os.path.join(os.getcwd(), "mlflow_experiments_log")
+    local_tracking_uri: str = os.path.join("mlflow_experiments_log")
     experiment_name: str = "telco-churn-classification"
     roc_plot_file_path: str = os.path.join("plots", "roc_curve_all_models.png")
 
@@ -95,7 +97,9 @@ class ModelTrainer:
                 return None
             else:
                 logging.info(f"Saving the best model ; best experiment - {self.best_exp} ; highest f1 score - {self.best_f1_score}")
-                mlflow.sklearn.log_model(self.best_model, "best_model")
+                mlflow.sklearn.save_model(self.best_model, 
+                                          self.model_trainer_config.best_model_path, 
+                                          serialization_format=mlflow.sklearn.SERIALIZATION_FORMAT_PICKLE)
                 return self.best_model
 
         except Exception as e:

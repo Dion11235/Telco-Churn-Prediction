@@ -74,6 +74,7 @@ class DataAugmentation:
             logging.info("\nAfter Oversampling :\n {}".format(value_counts_dict))
 
             # SMOTE
+            logging.debug(f"{train_x.shape}-{train_y.shape}")
             smote_train_x, smote_train_y = self.perform_smote(train_x, train_y)
             np.save(self.data_augmentation_configs.smote_train_x_data_enc_path, smote_train_x)
             np.save(self.data_augmentation_configs.smote_train_y_data_enc_path, smote_train_y)

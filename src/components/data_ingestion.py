@@ -178,5 +178,5 @@ if __name__ == "__main__":
     data_augmentation = DataAugmentation()
     augmented_data_list = data_augmentation.augment_data(train_x_enc, train_y_enc)
 
-    model_trainer = ModelTrainer()
-    best_model = model_trainer.train_and_evaluate_model(augmented_data_list, test_x_enc, test_y_enc)
+    # model_trainer = ModelTrainer()
+    # best_model = model_trainer.train_and_evaluate_model(augmented_data_list, test_x_enc, test_y_enc)

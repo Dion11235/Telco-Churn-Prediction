@@ -10,7 +10,7 @@ from sklearn.impute import SimpleImputer
 
 from src.exception import CustomException
 from src.logger import logging
-from src.utils import save_object
+from src.utils import save_object, save_json
 
 import pandas as pd
 import json
@@ -25,8 +25,9 @@ class DataTransformationConfig:
     test_y_data_enc_path: str = os.path.join("data","encoded", "test_y_encoded.npy")
 
     gt_enc_path: str = os.path.join("data","encoded", "class_encodings.json")
+    columns_values_enc = os.path.join("data","encoded", "column_unique_values.json")
 
-    preprocessor_obj_path: str = os.path.join("artifacts","preprocessor", "preprocessor.pkl")
+    preprocessor_obj_path: str = os.path.join("artifacts", "preprocessor.pkl")
 
 
 class DataTransformation:
@@ -37,6 +38,15 @@ class DataTransformation:
         try:
             self.categorical_cols = [col for col in train_x.columns if train_x[col].dtypes == object]
             self.numeric_cols = [col for col in train_x.columns if train_x[col].dtypes != object]
+            
+            column_values = {col:list(set(train_x[col])) for col in self.categorical_cols}
+            for col in self.numeric_cols:
+                column_values[col] = []
+            save_json(
+                
+                file_path=self.data_transform_configs.columns_values_enc,
+                obj=column_values
+            )
 
             num_pipeline = Pipeline(
                 steps=[
@@ -101,8 +111,11 @@ class DataTransformation:
             np.save(self.data_transform_configs.test_y_data_enc_path, self.test_y_encoded)
 
             # saving class labellings
-            with open(self.data_transform_configs.gt_enc_path, "w") as f:
-                json.dump(self.class_labels, f)
+            save_json(
+                
+                file_path=self.data_transform_configs.gt_enc_path,
+                obj=self.class_labels
+            )
 
             save_object(
 
